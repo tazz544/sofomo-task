@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins/content";
+
+.simple-page {
+  @include page;
+
+  &__content {
+  }
+
+  .graph {
+    display: flex;
+
+    &__section {
+      min-width: 180px;
+      flex-grow: 1;
+      height: 100%;
+
+      &__title {
+        justify-content: center;
+        margin-bottom: 18px;
+        align-items: center;
+        display: flex;
+      }
+
+      &__content {
+        border-right: 2px solid gray;
+        position: relative;
+        min-height: 500px;
+        padding: 16px;
+      }
+    }
+
+    &__item {
+      justify-content: center;
+      text-overflow: ellipsis;
+      align-items: center;
+      white-space: nowrap;
+      display: flex;
+      height: 60px;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+@import "variables";
+
+@include mat-core();
+$sofomo-app-primary: mat-palette($color-primary);
+$sofomo-app-accent: mat-palette($mat-amber);
+$sofomo-app-warn: mat-palette($mat-deep-orange);
+$sofomo-app-theme: mat-light-theme($sofomo-app-primary, $sofomo-app-accent, $sofomo-app-warn);
+@include angular-material-theme($sofomo-app-theme);
+@include mat-card-theme($sofomo-app-theme);

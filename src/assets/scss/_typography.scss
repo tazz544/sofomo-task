@@ -1,0 +1,29 @@
+@import "variables";
+
+@mixin text-color($color) {
+  color: $color;
+
+  &:visited {
+    color: $color;
+  }
+}
+
+* {
+  font-family: 'Varela', sans-serif;
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    @include text-color(mat-color($color-accent, 500));
+  }
+}
+
+.text-primary {
+  @include text-color(mat-color($color-primary, 500));
+}
+
+.text-accent {
+  @include text-color(mat-color($color-accent, 500));
+}

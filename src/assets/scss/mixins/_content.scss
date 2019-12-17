@@ -1,0 +1,26 @@
+@import "variables";
+
+@mixin content() {
+  padding: 0 0.9375rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+@mixin header($position: flex-start, $marginBottom: 28px, $color: $color-black, $size: 24px) {
+  margin-bottom: $marginBottom;
+  justify-content: $position;
+  display: flex;
+  width: 100%;
+
+  .header__title {
+    font-size: $size;
+    color: $color;
+  }
+}
+
+@mixin page($height: 400px) {
+  min-height: $height;
+  margin-bottom: 20px;
+  margin-top: 42px;
+}
