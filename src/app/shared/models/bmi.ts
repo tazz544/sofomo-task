@@ -16,6 +16,6 @@ export class Bmi {
       }
       return conditions.every(condition => !!condition);
     });
-    this.category = (matchedBmiRange) ? matchedBmiRange.name as BmiCategories : null;
+    this.category = (matchedBmiRange && this.value) ? matchedBmiRange.name as BmiCategories : 'obese';
   }
 }

@@ -18,7 +18,7 @@ export class ApiService {
 
   fetchPeople() {
     // Workaround for missing pageSize property:
-    const pages = range(1, 3);
+    const pages = range(1, 5);
     const calls = pages.map(page => {
       return this.http.get<any>(environment.apiUrl + `people/?page=${page}`, this.options);
     });

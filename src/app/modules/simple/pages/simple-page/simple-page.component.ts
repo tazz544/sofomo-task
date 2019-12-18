@@ -28,8 +28,6 @@ export class SimplePageComponent implements OnInit, OnDestroy {
     this.loading = true;
     this.dataSubscription = this.peopleService.get().subscribe(res => {
       this.data = res;
-      console.log('OUTPUT:');
-      console.log(res);
       this.loading = false;
     });
   }

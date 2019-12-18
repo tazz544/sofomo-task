@@ -17,8 +17,8 @@ export class Person {
       (props.birth_year)
         ? parseInt(props.birth_year.match(/\d/g).join(''), 10)
         : null;
-    this.mass = parseInt(props.mass, 10);
-    this.height = parseInt(props.height, 10);
+    this.mass = (props.mass) ? parseInt(props.mass.split(',').join(''), 10) : null;
+    this.height = (props.height) ? parseInt(props.height.split(',').join(''), 10) : null;
     this.bmi = new Bmi({
       mass: this.mass,
       height: this.height
