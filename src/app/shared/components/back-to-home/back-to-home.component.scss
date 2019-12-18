@@ -1,0 +1,20 @@
+@import "variables";
+
+.back-to-home {
+  margin: 30px 0;
+  display: flex;
+
+  &__link, i {
+    color: mat-color($color-primary, 400);
+    transition-duration: .3s;
+    font-size: 12px;
+
+    i {
+      margin-right: 6px;
+    }
+
+    &:hover {
+      color: mat-color($color-primary, 700);
+    }
+  }
+}

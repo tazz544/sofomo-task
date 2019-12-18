@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {PeopleService} from '@app/shared/services/people.service';
 import {Subscription} from 'rxjs';
-import {IGraphSection} from '@app/shared/interfaces/graph';
+import {IGraphSection} from '@app/shared/interfaces';
 
 @Component({
   selector: 'app-simple-page',

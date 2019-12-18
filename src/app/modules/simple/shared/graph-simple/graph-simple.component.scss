@@ -1,11 +1,13 @@
 @import "variables";
 
 .graph {
+  padding-top: -30px;
   flex-wrap: wrap;
   display: flex;
 
   &__section {
     min-width: 180px;
+    padding-top: 30px;
     flex-grow: 1;
 
     &__title {
@@ -16,9 +18,8 @@
     }
 
     &__content {
-      border-right: 2px solid gray;
+      border-right: 2px solid darken($color-background, 10%);
       position: relative;
-      min-height: 500px;
       padding: 16px;
       height: 100%;
 

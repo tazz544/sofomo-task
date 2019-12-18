@@ -2,16 +2,20 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatTooltipModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 
 import * as Components from './components';
 import * as Layout from './layout';
+import * as Loaders from './loaders';
 
 @NgModule({
   declarations: [
     Layout.PageWrapperComponent,
-    Components.GraphItemComponent
+    Components.GraphItemComponent,
+    Components.BackToHomeComponent,
+    Loaders.SpinnerComponent,
+    Loaders.PageLoaderComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,8 @@ import * as Layout from './layout';
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ],
   exports: [
     CommonModule,
@@ -30,8 +35,12 @@ import * as Layout from './layout';
     HttpClientModule,
     Layout.PageWrapperComponent,
     Components.GraphItemComponent,
+    Components.BackToHomeComponent,
+    Loaders.SpinnerComponent,
+    Loaders.PageLoaderComponent,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ]
 })
 export class SharedModule {

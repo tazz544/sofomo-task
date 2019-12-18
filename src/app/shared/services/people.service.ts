@@ -2,9 +2,8 @@ import {Injectable} from '@angular/core';
 import {ApiService} from '@app/shared/services/api.service';
 import {map} from 'rxjs/operators';
 import {Person} from '@app/shared/models';
-import {GLOBAL} from '@app/shared/constants/ranges.constants';
-import {IRange} from '@app/shared/interfaces';
-import {IGraphSection} from '@app/shared/interfaces/graph';
+import {IGraphSection, IRange} from '@app/shared/interfaces';
+import {GLOBAL} from '@app/shared/constants/global.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +14,7 @@ export class PeopleService {
   }
 
   private assignToSections(res: Person[]) {
-    const ranges: IRange[] = GLOBAL.RANGES;
+    const ranges: IRange[] = GLOBAL.YEAR_RANGES;
     const result: IGraphSection[] = ranges.map(range => {
       const section: IGraphSection = {};
       section.name = (range.to) ? `${range.from}-${range.to}BBY` : `${range.from}+BBY`;
@@ -25,7 +24,7 @@ export class PeopleService {
           item.birthYear >= range.from
         ];
         if (range.to) {
-          conditions.push(item.birthYear <= range.to);
+          conditions.push(item.birthYear < range.to);
         }
         return conditions.every(condition => !!condition);
       });

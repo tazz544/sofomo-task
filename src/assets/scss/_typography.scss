@@ -27,3 +27,7 @@ a {
 .text-accent {
   @include text-color(mat-color($color-accent, 500));
 }
+
+.disabled {
+  pointer-events: none;
+}

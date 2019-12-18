@@ -1,5 +1,9 @@
 <div class="simple-page">
-  <div class="simple-page__content" *ngIf="!loading">
-    <app-graph-simple [data]="data"></app-graph-simple>
+  <div class="simple-page__content">
+    <app-back-to-home></app-back-to-home>
+    <ng-container *ngIf="!loading">
+      <app-graph-simple [data]="data"></app-graph-simple>
+    </ng-container>
+    <app-page-loader *ngIf="loading"></app-page-loader>
   </div>
 </div>
