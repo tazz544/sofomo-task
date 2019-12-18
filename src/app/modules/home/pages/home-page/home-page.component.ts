@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {fadeIn, fadeOut} from '@app/shared/animations';
 
 @Component({
@@ -7,12 +7,5 @@ import {fadeIn, fadeOut} from '@app/shared/animations';
   styleUrls: ['./home-page.component.scss'],
   animations: [fadeIn, fadeOut]
 })
-export class HomePageComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+export class HomePageComponent {
 }
