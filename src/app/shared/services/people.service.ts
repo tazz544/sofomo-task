@@ -4,6 +4,7 @@ import {map} from 'rxjs/operators';
 import {Person} from '@app/shared/models';
 import {IGraphSection, IRange} from '@app/shared/interfaces';
 import {GLOBAL} from '@app/shared/constants/global.constants';
+import {orderBy} from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -42,6 +43,7 @@ export class PeopleService {
     return this.apiService.fetchPeople()
       .pipe(map(res => {
         res = res.map(item => new Person(item));
+        res = orderBy(res, ['birthYear'], ['asc']);
         res = this.assignToSections(res);
         return res;
       }));

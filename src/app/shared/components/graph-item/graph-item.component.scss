@@ -1,13 +1,27 @@
 @import "variables";
 
+@mixin bmiBackground($color) {
+  .mat-card {
+    background: $color;
+  }
+}
+
 .graph__item {
-  justify-content: center;
-  text-overflow: ellipsis;
   margin-bottom: 12px;
-  align-items: center;
-  white-space: nowrap;
-  display: flex;
-  height: 60px;
-  width: 100%;
-  padding: 0;
+
+  .mat-card {
+    justify-content: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding: 0;
+  }
+
+  &.underweight {@include bmiBackground(map-get($bmi-palette, underweight)); .mat-card {color: $color-white}}
+  &.healthy {@include bmiBackground(map-get($bmi-palette, healthy))}
+  &.overweight {@include bmiBackground(map-get($bmi-palette, overweight))}
+  &.obese {@include bmiBackground(map-get($bmi-palette, obese))}
 }

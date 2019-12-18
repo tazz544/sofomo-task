@@ -23,5 +23,26 @@ export const GLOBAL = {
     {
       from: 100
     }
+  ],
+  BMI_RANGES: [
+    {
+      name: 'underweight',
+      from: 0,
+      to: 16
+    },
+    {
+      name: 'healthy',
+      from: 16,
+      to: 25
+    },
+    {
+      name: 'overweight',
+      from: 25,
+      to: 40
+    },
+    {
+      name: 'obese',
+      from: 40
+    }
   ]
 };

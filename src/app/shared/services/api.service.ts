@@ -1,23 +1,11 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {forkJoin} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {IHttpOptions} from '@app/shared/interfaces';
 
 import {range} from 'lodash';
-
-interface IHttpOptions {
-  headers?: HttpHeaders | {
-    [header: string]: string | string[];
-  };
-  observe?: 'body';
-  params?: HttpParams | {
-    [param: string]: string | string[];
-  };
-  reportProgress?: boolean;
-  responseType?: 'json';
-  withCredentials?: boolean;
-}
 
 @Injectable({
   providedIn: 'root'

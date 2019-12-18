@@ -3,6 +3,13 @@ $color-white: #fff;
 $color-black: #000;
 $color-background: #f2f2f7;
 
+$bmi-palette: (
+  underweight: #000,
+  healthy: #d3ffce,
+  overweight: #ffc3a0,
+  obese: #fa8072
+);
+
 $color-primary: (
   50 : #f8eff4,
   100 : #edd7e3,

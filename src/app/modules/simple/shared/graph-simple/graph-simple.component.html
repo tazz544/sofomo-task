@@ -1,8 +1,17 @@
+<div class="legend">
+  <ng-container *ngFor="let item of legend">
+    <div class="legend__item">
+      <div class="legend__item__sample {{ item }}"></div>
+      <div class="legend__item__label">{{ item }}</div>
+    </div>
+  </ng-container>
+</div>
+
 <div class="graph" @fadeIn>
-  <ng-container *ngFor="let item of data; let isLast = last">
+  <ng-container *ngFor="let item of data">
     <div class="graph__section">
       <div class="graph__section__title">{{ item.name }}</div>
-      <div class="graph__section__content" [ngClass]="{'last': isLast}">
+      <div class="graph__section__content">
         <ng-container *ngFor="let person of item.data">
           <app-graph-item [data]="person"></app-graph-item>
         </ng-container>

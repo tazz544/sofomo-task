@@ -1,3 +1,8 @@
-<mat-card class="graph__item">
-  {{ data.name }} ({{ data.birthYear }})
-</mat-card>
+<div class="graph__item {{ data.bmi.category }}">
+  <mat-card>
+    {{ data.name }}
+    <!--  {{ data.birthYear }} <br>-->
+    <!--  {{ data.bmi.category }}-->
+  </mat-card>
+</div>
+
