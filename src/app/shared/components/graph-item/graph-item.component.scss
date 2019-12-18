@@ -1,0 +1,13 @@
+@import "variables";
+
+.graph__item {
+  justify-content: center;
+  text-overflow: ellipsis;
+  margin-bottom: 12px;
+  align-items: center;
+  white-space: nowrap;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding: 0;
+}

@@ -5,11 +5,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatCardModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 
+import * as Components from './components';
 import * as Layout from './layout';
 
 @NgModule({
   declarations: [
-    Layout.PageWrapperComponent
+    Layout.PageWrapperComponent,
+    Components.GraphItemComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import * as Layout from './layout';
     ReactiveFormsModule,
     HttpClientModule,
     Layout.PageWrapperComponent,
+    Components.GraphItemComponent,
     MatButtonModule,
     MatCardModule
   ]

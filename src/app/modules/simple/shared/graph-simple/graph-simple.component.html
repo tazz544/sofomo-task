@@ -1,0 +1,12 @@
+<div class="graph">
+  <ng-container *ngFor="let item of data; let isLast = last">
+    <div class="graph__section">
+      <div class="graph__section__title">{{ item.name }}</div>
+      <div class="graph__section__content" [ngClass]="{'last': isLast}">
+        <ng-container *ngFor="let person of item.data">
+          <app-graph-item [data]="person"></app-graph-item>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>

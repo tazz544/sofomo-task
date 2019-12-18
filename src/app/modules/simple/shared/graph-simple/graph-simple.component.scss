@@ -1,0 +1,30 @@
+@import "variables";
+
+.graph {
+  flex-wrap: wrap;
+  display: flex;
+
+  &__section {
+    min-width: 180px;
+    flex-grow: 1;
+
+    &__title {
+      justify-content: center;
+      margin-bottom: 18px;
+      align-items: center;
+      display: flex;
+    }
+
+    &__content {
+      border-right: 2px solid gray;
+      position: relative;
+      min-height: 500px;
+      padding: 16px;
+      height: 100%;
+
+      &.last {
+        border-right: none;
+      }
+    }
+  }
+}
