@@ -24,9 +24,9 @@ export class ApiService {
     });
     return forkJoin(calls)
       .pipe(map(res => {
-        const data = [];
+        let data = [];
         res.forEach(item => {
-          data.push(item.results);
+          data = [...data, ...item.results];
         });
         return data;
       }));
